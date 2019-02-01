@@ -1,0 +1,27 @@
+﻿body {
+}
+
+.myFooterText {
+    font-family: Verdana;
+    font-weight:700;
+}
+
+#homeBackground {
+    background-image: url('~/Content/Graphics/HomeJumbotron.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.InstrumentPhoto {
+    height:60%;
+    width:80%;
+    align-content:center;
+    opacity:.8;
+    
+}
+
+.MusicSheetBackground {
+    background-image:url('../Content/Graphics/MusicSheetBackground.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}

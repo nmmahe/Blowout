@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Summary";
+}
+
+<h2>Summary</h2>
+
+<h4>Thank you! Here are confirmation details</h4>
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Client ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Instrument ID</th>
+        <th>Instrument</th>
+        <th>Type</th>
+        <th>Month Price</th>
+        <th>18 Month Pay Total</th>
+    </tr>
+    <tr>
+        <td>@ViewBag.ClientID</td>
+        <td>@ViewBag.FirstName</td>
+        <td>@ViewBag.LastName</td>
+        <td>@ViewBag.InstrumentID</td>
+        <td>@ViewBag.Desc</td>
+        <td>@ViewBag.Type</td>
+        <td>$@ViewBag.Price</td>
+        <td>$@ViewBag.EndPrice</td>
+    </tr>
+</table>
+<div class="text-center">
+    <img class="rounded-0" src="~/Content/Graphics/@(ViewBag.Desc).jpg" alt="@(ViewBag.Desc).jpg" />
+</div>

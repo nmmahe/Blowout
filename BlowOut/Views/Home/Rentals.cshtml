@@ -1,0 +1,79 @@
+﻿@model IEnumerable<BlowOut.Models.Instrument>
+@{
+    ViewBag.Title = "Rentals";
+}
+
+<h2 class="myFooterText" style="color:#d74f4f; text-shadow:2px 1px 1px #333">Rentals</h2>
+
+<div class="container-fluid " style="background: rgba(76, 90, 30, 0.6); border-radius:15px ">
+    
+    <table class="table table-striped rounded">
+        <tr>
+            <th>Instrument</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Link to Rent</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td class="myFooterText" style="color:#d74f4f; font-weight: 800; text-shadow: 1px 1px 1px #333 ">@item.Desc</td>
+                <td class="myFooterText" style="color:#d74f4f; font-weight: 800; text-shadow: 1px 1px 1px #333">@item.Type</td>
+                <td class="myFooterText" style="color:#d74f4f; font-weight: 800; text-shadow: 1px 1px 1px #333">@item.Price</td>
+                <td class="myFooterText" style="color:#d74f4f; font-weight: 800; text-shadow: 1px 1px 1px #333">@Html.ActionLink("Rent","Create","Home", new { id = item.InstrumentID }, new { @class="btn btn-primary" })</td>
+            </tr>
+        }
+    </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @*<div class="row">
+        <h2 class="myFooterText" style="color:white; text-shadow:2px 1px 1px #333">Select an Instrument to rent</h2>
+    </div>
+    <div class="row text-center">
+        <div class="col-4">
+            <h4 class="myFooterText">Saxophone</h4>
+            <a href="@Url.Action("Saxophone","Home")"> <img class="InstrumentPhoto rounded" src="~/Content/Graphics/Saxophone.jpg" alt="Saxophone Image" /></a>
+        </div>
+        @foreach (var item in Model)
+        {<div class="col-4">
+            <h4 class="myFooterText">@item.Desc</h4>
+            <a href="@Url.Action(item.Desc, "Home")"><img class="InstrumentPhoto rounded" src="~/Content/Graphics/@item.Desc" alt="@item.Desc Image" /></a>
+        </div>
+        }
+       <div class="col-4">
+            <h4 class="myFooterText">Flute</h4>
+            <a href="@Url.Action("Flute","Home")"><img class="InstrumentPhoto rounded" src="~/Content/Graphics/Flute.jpg" alt="Flute Image" /></a>
+        </div>
+
+        <div class="col-4 text-center">
+            <h4 class="myFooterText">Trombone</h4>
+            <a href="@Url.Action("Trombone","Home")"><img class="InstrumentPhoto rounded" src="~/Content/Graphics/Trombone.jpg" alt="Trombone Image" /></a>
+        </div>
+        <div class="col-4">
+            <h4 class="myFooterText">Tuba</h4>
+            <a href="@Url.Action("Tuba","Home")"><img class="InstrumentPhoto rounded" src="~/Content/Graphics/Tuba.jpg" alt="Tuba Image" /></a>
+        </div>
+        <div class="col-4">
+            <h4 class="myFooterText">Clarinet</h4>
+            <a href="@Url.Action("Clarinet","Home")"><img class="InstrumentPhoto rounded" src="~/Content/Graphics/Clarinet.jpg" alt="Clarinet Image" /></a>
+        </div>*@
+
+    </div>
+

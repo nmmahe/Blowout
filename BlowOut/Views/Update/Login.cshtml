@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<br />
+<h6 class="text-danger">@ViewBag.LogError</h6>
+<br />
+@using (Html.BeginForm("Login", "Update", FormMethod.Post))
+{
+    <label class="font-weight-bold" for="inputUsername">Username</label>
+    @Html.TextBox("Username")
+    <label class="font-weight-bold" for="inputPassword">Password</label>
+    @Html.Password("Password")
+
+    <input type="submit" value="Login" />
+}
+

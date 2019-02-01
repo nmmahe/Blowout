@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Price Listing";
+}
+
+<h2>Price Listing</h2>
+
+<div class="row">
+    <div class="col-6">
+        <img src="~/Content/Graphics/@(ViewBag.Instrument).jpg" />
+        <h3 class="myFooterText" style="margin-left:14%">@ViewBag.Instrument</h3>
+        <p class="text-muted" >*Upon 18 months of renting, you will be the owner of the instrument.
+        If you return it at any time before 3 months there will be a $200 re-stocking fee. If you return it after 3 months you forfeit any equity in the instrument.</p>
+    </div>
+    <div class="col-6">
+        <h3 class="myFooterText">Select an Instrument Status</h3>
+        <input type="button" class="btn btn-lg btn-block btn-primary" onclick="ShowBuyPrice()" value="Check New Price" />
+        <h4>
+            <span class="text-hide" id="BuyPrice">
+                $@ViewBag.Buy/Month
+            </span>
+        </h4>
+        <br />
+        <input type="button" class="btn btn-lg btn-block btn-primary" onclick="ShowRentPrice()" value="Check Used Price" />
+        <h4>
+            <span class="text-hide" id="RentPrice">
+                $@ViewBag.Rent/Month
+            </span>
+        </h4>
+        <br />
+        <br />
+        @Html.ActionLink("Click to Rent","","Home")
+
+
+
+    </div>
+</div>

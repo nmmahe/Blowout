@@ -1,0 +1,106 @@
+﻿@model IEnumerable<BlowOut.Models.Instrument>
+
+@{
+    ViewBag.Title = "UpdateData";
+}
+
+<h2>UpdateData</h2>
+
+
+<table class="table table-striped">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.InstrumentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.ClientID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Email)
+        </th>
+        <th>
+            Client Detail Options
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(model => item.InstrumentID)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Type)
+        </td>
+        <td>
+            $@Html.DisplayFor(model => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.ClientID)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.City)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.State)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Client.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.InstrumentID }, new {@class = "btn btn-success", style= "width:70px"})
+            @Html.ActionLink("Delete", "Delete", new { id = item.InstrumentID }, new { @class = "btn btn-danger", style = "width:70px" })
+        </td>
+    </tr>
+}
+
+</table>
